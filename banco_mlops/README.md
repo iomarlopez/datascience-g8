@@ -1,6 +1,6 @@
 # 🏦 Proyecto Final MLOps - Bank Marketing
 
-Proyecto final de Machine Learning Operations (MLOps) desarrollado para el bootcamp, basado en el dataset *Bank Marketing* de UCI.
+Proyecto final de Machine Learning Operations (MLOps), basado en el dataset *Bank Marketing* de UCI.
 
 ## 📁 Estructura del Proyecto
 - `app/`: Contiene la interfaz web interactiva desarrollada con **Streamlit**.
@@ -24,3 +24,21 @@ Asegúrate de tener instalado **Python 3.11** y el gestor de paquetes **`uv`**.
 Ejecuta el script de entrenamiento para generar el modelo y su ficha técnica en la carpeta `models/`:
 ```powershell
 uv run python -m src.banco_mlops.train
+
+### 2. Ejecutar la API (Backend)
+Enciende el servidor con FastAPI:
+```powershell
+uv run fastapi dev src/banco_mlops/api.py
+La documentación interactiva estará disponible en: http://127.0.0.1:8000/docs
+
+
+### 3. Ejecutar la Interfaz Web (Frontend)
+Abre una nueva terminal y lanza la aplicación de Streamlit:
+```powershell
+uv run streamlit run app/streamlit_app.py
+
+### 4. Ejecutar las Pruebas Automáticas
+Para verificar que todas las pruebas pasen correctamente:
+
+''PowerShell
+uv run pytest -v
