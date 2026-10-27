@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.insert(0, os.getcwd())  # Le enseña a Python a encontrar la carpeta 'src'
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from src.banco_mlops.predict import predict_subscription, get_model_info
