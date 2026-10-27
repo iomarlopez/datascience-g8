@@ -1,0 +1,27 @@
+[project]
+name = "banco-mlops"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "iomarlopez", email = "leoxx26@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi[standard]>=0.162.0",
+    "joblib>=1.6.0",
+    "numpy>=2.4.6",
+    "pandas>=3.1.0",
+    "pydantic>=2.14.1",
+    "pytest>=9.1.1",
+    "requests>=2.34.2",
+    "scikit-learn>=1.9.1",
+    "streamlit>=1.66.1",
+]
+
+[project.scripts]
+banco-mlops = "banco_mlops:main"
+
+[build-system]
+requires = ["uv_build>=0.11.27,<0.12.0"]
+build-backend = "uv_build"
